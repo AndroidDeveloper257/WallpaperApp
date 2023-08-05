@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.popular.PopularFragment"
+        android:label="@string/popular"
+        tools:layout="@layout/fragment_popular" />
+
+    <fragment
+        android:id="@+id/randomFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.random.RandomFragment"
+        android:label="@string/random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/likedFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.liked.LikedFragment"
+        android:label="@string/liked"
+        tools:layout="@layout/fragment_liked" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.about.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.web.WebFragment"
+        android:label="fragment_web"
+        tools:layout="@layout/fragment_web" />
+    <fragment
+        android:id="@+id/openImageFragment"
+        android:name="com.example.lesson75wallpaperapprecyclerviewpagination.fragments.open_image.OpenImageFragment"
+        android:label="@string/open_image"
+        tools:layout="@layout/fragment_open_image" />
+</navigation>

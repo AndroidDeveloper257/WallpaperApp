@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.open_image.OpenImageFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:src="@drawable/test_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/app_main_color" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_gravity="top">
+
+        <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/circle_background"
+            app:blk_cornerRadius="@dimen/_60sdp"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back_icon" />
+
+        </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+        <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+            android:id="@+id/about_btn"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            app:blk_cornerRadius="@dimen/_60sdp"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/about_img"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_about_icon" />
+
+        </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+        <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+            android:id="@+id/share_btn"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            app:blk_cornerRadius="@dimen/_60sdp"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/about_btn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_share_icon" />
+
+        </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/bottom_open"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                    android:id="@+id/download_btn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/circle_background"
+                    android:gravity="center"
+                    app:blk_cornerRadius="@dimen/_60sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_download_icon" />
+
+                </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                    android:id="@+id/set_background_btn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/circle_background"
+                    android:gravity="center"
+                    app:blk_cornerRadius="@dimen/_60sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_set_background_icon" />
+
+                </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                    android:id="@+id/filter_btn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/circle_background"
+                    android:gravity="center"
+                    app:blk_cornerRadius="@dimen/_60sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_effects_icon" />
+
+                </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                    android:id="@+id/like_btn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/circle_background"
+                    android:gravity="center"
+                    app:blk_cornerRadius="@dimen/_60sdp">
+
+                    <ImageView
+                        android:id="@+id/liked_img"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_disliked_icon" />
+
+                </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_choice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                android:id="@+id/home_screen"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                app:blk_cornerRadius="@dimen/_60sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/lock_screen"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_set_home_screen_icon" />
+
+            </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                android:id="@+id/lock_screen"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                app:blk_cornerRadius="@dimen/_60sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_set_lock_screen_icon" />
+
+            </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                android:id="@+id/home_lock_screen"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                app:blk_cornerRadius="@dimen/_60sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintLeft_toRightOf="@id/lock_screen"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_set_both_screen_icon" />
+
+            </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/bottom_filtered"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"
+                android:layout_height="match_parent"
+                android:id="@+id/line"/>
+
+            <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="@id/line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:id="@+id/download_filter_btn"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                app:blk_cornerRadius="@dimen/_60sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_download_icon" />
+
+            </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+            <com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout
+                android:id="@+id/set_filter_background_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                app:blk_cornerRadius="@dimen/_60sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_set_background_icon" />
+
+            </com.example.lesson75wallpaperapprecyclerviewpagination.blur.BlurLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/filter_item"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
