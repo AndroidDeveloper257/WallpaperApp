@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="app_main_color">#011627</color>
+    <color name="drawer_color">#152C3F</color>
+    <color name="pink">#F222DD</color>
+    <color name="disabled_text">#808B93</color>
 </resources>
