@@ -9,9 +9,10 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.WallpaperApp.AppBarOverlay">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/app_main_color"
@@ -19,99 +20,44 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--    <include layout="@layout/content_main" />-->
+    <include layout="@layout/content_main" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="bottom"
-        android:src="@drawable/img"
-        android:scaleType="centerCrop"/>
+    <!--
+    TODO bottom navigation blur
+    -->
 
-    <androidx.cardview.widget.CardView
+    <!--<com.example.wallpaperapp.utils.BottomNavigationViewWithIndicator
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_card"
         android:layout_gravity="bottom"
-        android:backgroundTint="#72FFFFFF"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="30dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardCornerRadius="100dp"
-        app:cardElevation="0dp">
+        android:layout_margin="10dp"
+        android:background="@drawable/bottom_background"
+        android:minHeight="?android:actionBarSize"
+        app:elevation="8dp"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:itemBackground="@android:color/transparent"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu" />-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/line1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.25" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/line2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.5" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/line3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.75" />
-
-            <ImageView
-                android:id="@+id/home"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:padding="13dp"
-                android:src="@drawable/ic_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="@id/line1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/popular"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:padding="13dp"
-                android:src="@drawable/ic_popular"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/line1"
-                app:layout_constraintRight_toRightOf="@id/line2"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/random"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:padding="13dp"
-                android:src="@drawable/ic_random"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/line2"
-                app:layout_constraintRight_toRightOf="@id/line3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/favorite"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:padding="13dp"
-                android:src="@drawable/ic_favorite_unselected"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/line3"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/bottom_background"
+        app:elevation="8dp"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:itemBackground="@android:color/transparent"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

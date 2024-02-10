@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wallpaperapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.wallpaperapp.ui.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.example.wallpaperapp.ui.PopularFragment"
+        android:label="fragment_popular"
+        tools:layout="@layout/fragment_popular" />
+    <fragment
+        android:id="@+id/randomFragment"
+        android:name="com.example.wallpaperapp.ui.RandomFragment"
+        android:label="fragment_random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.wallpaperapp.ui.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.wallpaperapp.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

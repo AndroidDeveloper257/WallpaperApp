@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home_drawer"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/popularFragment"
+            android:icon="@drawable/ic_popular_drawer"
+            android:title="@string/popular" />
+        <item
+            android:id="@+id/randomFragment"
+            android:icon="@drawable/ic_random_drawer"
+            android:title="@string/random" />
+        <item
+            android:id="@+id/favoriteFragment"
+            android:icon="@drawable/ic_favorite_drawer"
+            android:title="@string/favorite" />
+        <item
+            android:id="@+id/historyFragment"
+            android:icon="@drawable/ic_history_drawer"
+            android:title="@string/history" />
+        <item
+            android:id="@+id/aboutFragment"
+            android:icon="@drawable/ic_about_drawer"
+            android:title="@string/about" />
+    </group>
+
+</menu>
