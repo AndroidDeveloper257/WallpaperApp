@@ -16,17 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/app_main_color"
-            app:popupTheme="@style/Theme.Lesson75WallpaperAppRecyclerViewPagination.PopupOverlay" />
+            app:popupTheme="@style/Theme.WallpaperApp.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />
 
-    <!--
-    TODO bottom navigation blur
-    -->
-
-    <!--<com.example.wallpaperapp.utils.BottomNavigationViewWithIndicator
+    <com.example.wallpaperapp.utils.BottomNavigationViewWithIndicator
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,23 +36,6 @@
         app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@color/white"
         app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_menu" />-->
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_margin="10dp"
-        android:background="@drawable/bottom_background"
-        app:elevation="8dp"
-        app:itemActiveIndicatorStyle="@android:color/transparent"
-        app:itemBackground="@android:color/transparent"
-        app:itemHorizontalTranslationEnabled="false"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:labelVisibilityMode="selected"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_menu" />
 

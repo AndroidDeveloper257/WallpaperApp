@@ -5,4 +5,5 @@ object ConstValues {
     const val MAX_SCALE = 15f
     const val BASE_DURATION = 200L
     const val VARIABLE_DURATION = 200L
+    const val TAG = "WallpaperAppTag"
 }

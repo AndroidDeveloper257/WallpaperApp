@@ -6,6 +6,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.core.content.ContextCompat
@@ -42,6 +43,7 @@ class BottomNavigationViewWithIndicator: BottomNavigationView,
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        Log.d("TAG", "onNavigationItemSelected:")
         if (externalSelectedListener?.onNavigationItemSelected(item) != false) {
             onItemSelected(item.itemId)
             return true
@@ -55,6 +57,7 @@ class BottomNavigationViewWithIndicator: BottomNavigationView,
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
+        Log.d("TAG", "onAttachedToWindow: ")
         doOnPreDraw {
             // Move the indicator in place when the view is laid out
             onItemSelected(selectedItemId, false)
@@ -76,6 +79,7 @@ class BottomNavigationViewWithIndicator: BottomNavigationView,
     }
 
     private fun onItemSelected(itemId: Int, animate: Boolean = true) {
+        Log.d("TAG", "onItemSelected: $itemId item selected in ${this::class.java.simpleName}")
         if (!isLaidOut) return
 
         // Interrupt any current animation, but don't set the end values,

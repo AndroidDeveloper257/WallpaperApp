@@ -1,9 +1,10 @@
 package com.example.wallpaperapp
 
-import android.graphics.RenderEffect
-import android.graphics.Shader
-import android.os.Build
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
@@ -40,8 +41,53 @@ class MainActivity : AppCompatActivity() {
                 ), drawerLayout
             )
             setupActionBarWithNavController(navController, appBarConfiguration)
-            appBarMain.bottomBar.setupWithNavController(navController)
             navigationView.setupWithNavController(navController)
+            appBarMain.bottomBar.setOnItemSelectedListener {
+                if (navController.currentDestination?.id != it.itemId) {
+                    navController.navigate(it.itemId)
+                    appBarMain.bottomBar.onNavigationItemSelected(it)
+                }
+                true
+            }
+            appBarMain.toolbar.setNavigationOnClickListener {
+                if (navController.currentDestination?.id == R.id.historyFragment ||
+                    navController.currentDestination?.id == R.id.aboutFragment
+                ) {
+                    Log.d(TAG, "onCreate: back")
+                    navController.popBackStack()
+                } else {
+                    drawerLayout.open()
+                    Log.d(TAG, "onCreate: open drawer")
+                }
+            }
+            navigationView.setNavigationItemSelectedListener {
+                navController.navigate(it.itemId)
+                when (it.itemId) {
+                    R.id.homeFragment, R.id.popularFragment, R.id.randomFragment, R.id.favoriteFragment, R.id.historyFragment, R.id.aboutFragment -> {
+                        appBarMain.toolbar.visibility = View.VISIBLE
+                        appBarMain.bottomBar.visibility =
+                            if (it.itemId != R.id.historyFragment &&
+                                it.itemId != R.id.aboutFragment
+                            ) {
+                                appBarMain.bottomBar.onNavigationItemSelected(
+                                    navigationView.menu.findItem(
+                                        it.itemId
+                                    )
+                                )
+                                View.VISIBLE
+                            } else
+                                View.GONE
+                    }
+
+                    else -> {
+                        appBarMain.toolbar.visibility = View.GONE
+                        appBarMain.bottomBar.visibility = View.GONE
+                    }
+                }
+                drawerLayout.close()
+                Toast.makeText(this@MainActivity, "${it.title}", Toast.LENGTH_SHORT).show()
+                true
+            }
         }
     }
 

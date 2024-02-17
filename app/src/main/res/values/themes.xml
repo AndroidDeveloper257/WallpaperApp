@@ -4,10 +4,11 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@color/app_main_color</item>
     </style>
 
     <style name="Theme.WallpaperApp" parent="Base.Theme.WallpaperApp" />
 
-    <style name="Theme.Lesson75WallpaperAppRecyclerViewPagination.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.WallpaperApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
